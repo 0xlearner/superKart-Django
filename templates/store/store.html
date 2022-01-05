@@ -11,7 +11,13 @@
         <h2 class="title-page">Search Result</h2>
 
     {% else %}
-	    <h2 class="title-page">Our Store</h2>
+        {% if cat_cover.cat_banner %}
+           <div class="intro-banner-wrap">
+                <img src="{{ cat_cover.cat_banner.url }}" class="img-fluid rounded">
+           </div>
+        {% else %}
+            <h2 class="title-page">Our Store</h2>
+        {% endif %}
     {% endif %}
 
 </div> <!-- container //  -->
